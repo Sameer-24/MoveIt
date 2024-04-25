@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("dribbble-success-2.gif");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        #container{    
+            align-items: center;
+            text-align: center;
+            margin-top: 300px;
+            color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <body>
+        <div id="container">
+            
+            <h1>Thankyou for choosing us !!</h1>
+            <p>You will be redirected in:  <div id="counter"> 3 </div> </p>
+            <p style="width:1000px;"></p>
+            
+        </div>
+        
+        <script>
+            setInterval(function() {
+                var div = document.querySelector("#counter");
+                var count = div.textContent * 1 - 1;
+                div.textContent = count;
+                if (count <= 0) {
+                    window.location.replace("./index.html");
+                }
+            }, 1000);
+        </script>
+    </body>
+</body>
+</html>
+
